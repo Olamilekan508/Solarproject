@@ -1,0 +1,161 @@
+/* ===============================
+   ACHIEVEMENT SECTION STYLES
+================================= */
+
+.achievement_container .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 20px;
+  padding-top: 0;
+}
+
+.achievement_container .achievement {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: var(--color-ui-secondary, #f0f0f0);
+  border-radius: var(--radius-3, 8px);
+  transition: var(--transition, all 0.3s ease);
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  will-change: transform;
+}
+
+.achievement_container .achievement:hover {
+  border-color: var(--color-ui-primary, #007bff);
+  background: transparent;
+  transform: scale(1.1);
+}
+
+.achievement_container .achievement .icon_container {
+  margin: auto;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.achievement_container .achievement:hover .icon_container {
+  transform: scale(1.2);
+}
+
+.achievement_container .achievement .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.achievement_container .achievement .title {
+  font-size: 40px;
+  margin: 0;
+  color: var(--color-primary-accent, #ff6600);
+}
+
+.achievement_container .achievement small {
+  font-size: 14px;
+  color: var(--color-text-muted, #666);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .achievement_container .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .achievement_container .achievement .title {
+    font-size: 20px;
+  }
+
+  .achievement_container .achievement .icon_container {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .achievement_container .achievement small {
+    font-size: 12px;
+  }
+}
+
+
+/* ===============================
+   ODOMETER STYLES
+================================= */
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.odometer-digit,
+.odometer-digit-spacer,
+.odometer-digit-inner,
+.odometer-ribbon,
+.odometer-ribbon-inner,
+.odometer-value {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.odometer-digit-spacer {
+  visibility: hidden;
+}
+
+.odometer-digit-inner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.odometer-ribbon {
+  display: block;
+}
+
+.odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.odometer-value.odometer-last-value {
+  position: absolute;
+}
+
+/* Animation: Up */
+.odometer-animating-up .odometer-ribbon-inner {
+  transition: transform 2s;
+  -webkit-transition: -webkit-transform 2s;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+}
+
+/* Animation: Down */
+.odometer-animating-down .odometer-ribbon-inner {
+  transition: transform 2s;
+  -webkit-transition: -webkit-transform 2s;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
