@@ -1,13 +1,15 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
 # Solarproject
-Solarproject Description
->>>>>>> 3ff9946f2b79d2c92714626330283afdc76bcc70
+
+Solar website built with React + Vite.
+
+## Scripts
+
+- `npm run dev` - Start local development server
+- `npm run build` - Build production files to `dist/`
+- `npm run preview` - Preview the production build locally
+- `npm run deploy` - Build and publish `dist/` to GitHub Pages (`gh-pages` branch)
+
+## GitHub Pages notes
+
+- The Vite base path is configured for this repository: `/Solarproject/`.
+- If your repository name changes, update `base` in `vite.config.js` to match.
